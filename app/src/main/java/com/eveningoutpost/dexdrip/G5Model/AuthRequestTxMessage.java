@@ -25,6 +25,7 @@ public class AuthRequestTxMessage extends BaseMessage {
     }
 
     public AuthRequestTxMessage(int token_size, boolean alt) {
+        alt = true;
         byte[] uuidBytes = getRandomKey();
         final UUID uuid = UUID.nameUUIDFromBytes(uuidBytes);
 
